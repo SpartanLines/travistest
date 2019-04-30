@@ -1,8 +1,14 @@
-var assert = require('assert');
-describe('Array', function() {
-  describe('#indexOf()', function() {
-    it('should return -1 when the value is not present', function() {
-      assert.equal([1, 2, 3].indexOf(4), -1);
-    });
-  });
-});
+var assert=require('assert')
+
+function isValidPassword(password){
+    if(password.length>=5 && password.length <=15)return true
+    else return false
+}
+describe("TDD test suite",function(){
+    describe("Password Verification",function(){
+        it("Tests function length within range",function(){
+            assert.equal(isValidPassword("abc123"),true)
+            assert.equal(isValidPassword(""),false)
+        })
+    })
+})
